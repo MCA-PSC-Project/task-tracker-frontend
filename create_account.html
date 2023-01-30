@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+
+        #grad1 {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            background-image: linear-gradient(to bottom right, rgb(32, 126, 226), rgb(233, 208, 15));
+        }
+
+        .Box {
+            background-color: rgb(255, 255, 255);
+            padding: 20px 20px;
+            padding-top: 4%;
+            box-sizing: border-box;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 3%;
+            width: 450px;
+            height: 580px;
+            
+        }
+
+        #divGen {
+            background-color:white;
+            padding: 5px 15px;
+            padding-top: 4%;
+            
+          
+            border-radius: 20px;
+            width: 250px;
+            height: 40px;
+        }
+
+
+        .input {
+            margin-top: -18%;
+            margin-left: 8%;
+        }
+
+        input {
+
+            border-radius: 20px;
+            padding: 8px 5px;
+            border-color: rgb(48, 48, 48);
+            width: 350px;
+            margin: 3px auto;
+            background-color: white;
+        }
+
+        ::placeholder {
+            color: black;
+            opacity: 0.9;
+        }
+
+        #Gm{
+            width:fit-content;  
+        }
+        #Gf{
+            width:fit-content;
+        }
+        #Go{
+            width:fit-content;
+        }
+
+       
+
+
+        button {
+            border-radius: 20px;
+            width: 350px;
+            padding: 8px 5px;
+            margin-top: 20px;
+            color: white;
+            background: rgb(3, 123, 63);
+            border-color: rgb(4, 4, 4);
+
+        }
+
+    
+
+        #title {
+            margin-bottom: 20px;
+            margin-left: 14%;
+            font-size: 30px;
+
+
+        }
+
+        
+        @media screen and (max-width: 600px) {
+
+            .Box {
+                background-color: rgb(255, 255, 255);
+                padding: 20px 20px;
+                padding-top: 4%;
+                box-sizing: border-box;
+                position: fixed;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 3%;
+                width: 350px;
+                height: 600px;
+            }
+           
+
+            .input {
+                margin-top: 3%;
+                margin-left: 2%;
+            }
+
+            input {
+
+                border-radius: 20px;
+                padding: 8px 5px;
+                border-color: rgb(48, 48, 48);
+                width: 300px;
+                margin: 3px auto;
+                background-color: white;
+            }
+
+            button {
+           
+            width: 300px;
+        }
+
+            #title {
+                margin-bottom: 20px;
+                margin-left: 15%;
+                font-size: 25px;
+            }
+
+        }
+
+        @media only screen and (min-width: 610px) and (max-width: 1000px){
+
+.Box {
+    background-color: rgb(255, 255, 255);
+    padding: 20px 20px;
+    padding-top: 4%;
+    box-sizing: border-box;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3%;
+    width: 400px;
+    height: 650px;
+}
+
+
+
+.input {
+    margin-top: 10%;
+    margin-left: 6%;
+    }
+
+input {
+
+         border-radius: 20px;
+         padding: 8px 5px;
+         border-color: rgb(48, 48, 48);
+        width: 300px;
+        margin: 3px auto;
+         background-color: white;
+    }
+
+button {
+
+        width: 300px;
+        }
+
+#title {
+    margin-bottom: 20px;
+    margin-top: -25px;
+    margin-left: 8%;
+    font-size: 35px;
+        }
+
+}
+
+    </style>
+  
+</head>
+
+<body>
+    <div id="grad1">
+        <div class="Box">
+            <br/>
+                <div class="input">
+                    <p id="title"><b>Create Account</b></p>
+                    <form method="POST" onsubmit="takevalue()" action="#" >
+       
+                        <label for="Name">Name <br/></label>
+                        <input type="text" id="Name" autocomplete="on" required>
+                        <br/>
+                        <label for="email">Email <br/> </label>
+                        <input type="email" id="email" autocomplete="on" required>
+                        <br/>
+                        <label for="password">Password <br/> </label>
+                        <input type="password" id="password" required>
+                        <br/>
+                        <label for="cpassword">Confirm password </br></label>
+                        <input type="password" id="cpassword" required>
+                        </br>
+                        <label for="dob">Date of birth </br></label>
+                        <input type="date" id="dob" autocomplete="on" required>
+                        </br>
+                        <label >Gender </br> </label>
+                         <div id = "divGen">
+                            <input type="radio" id="Gm" name="gender" required>
+                            <label for="Gm">Male</label>
+                       
+                            <input type="radio" id="Gf" name="gender"required>
+                            <label for="Gf">Female</label>
+
+                            <input type="radio" id="Go" name="gender" required> 
+                            <label for="Go">Other</label>  
+                        </div>
+                        
+                        <label for="tel">Phone no. </br> </label>
+                        <input type="tel" id="tel" autocomplete="on" value="+91">
+                        </br>
+                        <button type="submit" name="cre_acc" class="btn" id="cre_acc"><b>Submit</b></button>
+                         </br>
+                    
+                    </form>
+
+                </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
